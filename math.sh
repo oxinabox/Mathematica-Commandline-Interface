@@ -1,5 +1,7 @@
 #!/bin/bash
-PROG="../8.0/Executables/math" #Set this to the path to the normal commandline mathematica exectutable. Path is relitive to the location of this script
+PROG="../8.0/Executables/math" 
+
+#Set this to the path to the normal commandline mathematica exectutable. Path is relitive to the location of this script
 
 cd "$( dirname "${BASH_SOURCE[0]}" )"
 
