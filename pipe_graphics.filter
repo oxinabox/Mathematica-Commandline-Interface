@@ -1,0 +1,19 @@
+#!/usr/bin/env perl
+
+use lib ($ENV{RLWRAP_FILTERDIR} or ".");
+use RlwrapFilter;
+use strict;
+
+my $filter = new RlwrapFilter;
+
+$filter -> help_text("This filter replaces calls that would display graphics in a mathematic notebook, with calls that makes a lightweight X program start to display the graphic\n");
+
+$filter -> input_handler(
+    sub {
+        my ($cmd) = @_;
+        $cmd =~ s/^(([[:alpha:]]*(Plot|Chart|Histogram)(3D)?)|Graphics(3D|Grid|Row|Column)?|Show|WaveletScalogram)\s*\[/<<JavaGraphics` \1\[/g;
+        return $cmd;
+
+    });
+
+$filter -> run;
