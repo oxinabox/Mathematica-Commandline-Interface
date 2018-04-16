@@ -1,4 +1,4 @@
-#Mathematica Commandline Interface
+# Mathematica Commandline Interface
 
 Mathematica has always had a [commandline interface](http://reference.wolfram.com/language/tutorial/UsingATextBasedInterface.html).
 This is good, it is alot more responsive than the notebook on low specc'ed hardware, and opens up the option of running it on a high powered server over SSH.
@@ -7,15 +7,15 @@ This set of scripts wraps that command line interface to provide readline featur
 
 
 
-##Features
+## Features
 
 
-###Base Mathematica Commandline Features:
+### Base Mathematica Commandline Features:
 All the base features from the commandline mathematica are preserves, including:
  - Multiline "natural" equation output
  - Ability to interact with the liscensing servers in a variety of ways. (Some require a webbrowser)
 
-###Readline Features
+### Readline Features
 This program adds the following features using `rlwrap`
 
  - Bracket (brace) matching
@@ -25,7 +25,7 @@ This program adds the following features using `rlwrap`
      - It can be disabled by setting the `-x` flag: `math -x`
 
 
-##Installation
+## Installation
 The majority of the functionality of this interface is from using [rlwrap](https://github.com/hanslub42/rlwrap). 
 rlwrap can be installed on debain base distributions by `apt-get install rlwrap` and on many other distributions though there package-mangers.
 This interface has only been tested on linux. In theory it should work on any system with rlwrap, a POSIX shell and Mathematica.
